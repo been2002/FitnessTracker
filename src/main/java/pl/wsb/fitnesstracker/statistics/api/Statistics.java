@@ -18,7 +18,6 @@ public class Statistics {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Tu używamy wymaganego OneToOne
     @OneToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user;

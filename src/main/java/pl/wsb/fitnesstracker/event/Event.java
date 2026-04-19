@@ -1,5 +1,11 @@
 package pl.wsb.fitnesstracker.event;
 
-// TODO: Define the Event entity with appropriate fields and annotations
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "event")
 public class Event {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 }

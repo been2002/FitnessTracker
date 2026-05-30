@@ -1,0 +1,130 @@
+{
+  "info": {
+    "_postman_id": "0fbb77a6-e734-4825-a548-8684e491655e",
+    "name": "FitnessTracker_Zadanie1",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54682207",
+    "_collection_link": "https://go.postman.co/collection/54682207-0fbb77a6-e734-4825-a548-8684e491655e?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Utwórz użytkownika",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"firstName\": \"Maciej\",\n  \"lastName\": \"Nowak\",\n  \"birthdate\": \"1995-08-24\",\n  \"email\": \"maciej.nowak@domain.com\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8091/v1/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8091",
+          "path": [
+            "v1",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Pobierz wszystkich",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8091/v1/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8091",
+          "path": [
+            "v1",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Pobierz uproszczonych",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8091/v1/users/simple",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8091",
+          "path": [
+            "v1",
+            "users",
+            "simple"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Szukaj po mailu",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8091/v1/users/email?email=maciej",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8091",
+          "path": [
+            "v1",
+            "users",
+            "email"
+          ],
+          "query": [
+            {
+              "key": "email",
+              "value": "maciej"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Usuń użytkownika",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8091/v1/users/11",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8091",
+          "path": [
+            "v1",
+            "users",
+            "11"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
